@@ -19,7 +19,7 @@ if ($can_run) {
     };
     my $err = $@;
     ok !$lives, "We die on invalid SQL";
-    isn't $@, '', "We die with some error message";
+    isnt $@, '', "We die with some error message";
 
     $lives = eval {
         my $test_dbh = DBIx::RunSQL->create(
